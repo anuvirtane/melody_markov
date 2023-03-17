@@ -1,2 +1,5 @@
 # melody_markov
-Algoritmit ja tietorakenteet -aineopintojen harjoitustyö, Helsingin yliopisto
+
+Helsinki university Algorithms and data structures student project. 
+
+[Project definition](documentation/project_definition.md)
