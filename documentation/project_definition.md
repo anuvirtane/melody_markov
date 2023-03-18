@@ -23,7 +23,7 @@ It can generate "creative" output, and I am interested in seeing how "creative" 
 
 ## Input and output
 
-Input will be notes using [abc-notation](https://abcnotation.com/) or [LilyPond notes](http://lilypond.org/), output will be a melody played. Program gets the beginning of a melody as input and returns a full melody, that is the beginning of what it got, and what it generated to continue the melody
+Input will be a melody sung or played to computer microphone. Recording is made of that. Output will be a melody played. Program gets the beginning of a melody as input and returns a full melody, that is the beginning of what it got, and what it generated to continue the melody
 
 ## Efficiency targets
 Not set
