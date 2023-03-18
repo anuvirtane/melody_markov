@@ -1,5 +1,5 @@
 # Week 1 progress report
 
-I read through the course requirements and decided what kind of project I want to make, created the repo, readme and project definition. 
+I read through the course requirements and decided what kind of project I want to make, created the repo, readme and project definition. Did a little reading about python libraries that have to do with sound.
 
-Time spent: 2 h
+Time spent: 3 h
