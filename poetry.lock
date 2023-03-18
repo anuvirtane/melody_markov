@@ -139,6 +139,20 @@ CFFI = ">=1.0"
 numpy = ["numpy"]
 
 [[package]]
+name = "soundfile"
+version = "0.12.1"
+description = "An audio library based on libsndfile, CFFI and NumPy"
+category = "main"
+optional = false
+python-versions = "*"
+
+[package.dependencies]
+cffi = ">=1.0"
+
+[package.extras]
+numpy = ["numpy"]
+
+[[package]]
 name = "tomli"
 version = "2.0.1"
 description = "A lil' TOML parser"
@@ -149,7 +163,7 @@ python-versions = ">=3.7"
 [metadata]
 lock-version = "1.1"
 python-versions = "3.9"
-content-hash = "8a365f422cb57a2320ed4bda845b01d9b7b30b5c92c2342859bb4d5c423509cf"
+content-hash = "6bb2e43abc38a618f84bd4a03734b2c58cf5c0ee01a062600a0bd17d49dea50d"
 
 [metadata.files]
 attrs = []
@@ -167,4 +181,5 @@ pycparser = []
 pytest = []
 scipy = []
 sounddevice = []
+soundfile = []
 tomli = []
