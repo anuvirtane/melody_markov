@@ -19,7 +19,7 @@ Markov chain algorithm, data structures not clear yet
 
 ## Motivation for algorithm chosen
 
-It can generate "creative" output, and I am interested in seeing how "creative" it can get with music
+Markov chain "decides" what state to go to next, after having been at a specific state. It uses probabilities to do this, and has many use cases. It can generate "creative" output, and I am interested in seeing how "creative" it can get with music
 
 ## Input and output
 
