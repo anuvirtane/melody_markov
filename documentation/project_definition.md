@@ -15,7 +15,7 @@ No
 
 ## Algorithms and data structures
 
-Markov chain algorithm, data structures not clear yet
+Markov chain algorithm. Trie data structure for notes in ABC notation format.
 
 ## Motivation for algorithm chosen
 
