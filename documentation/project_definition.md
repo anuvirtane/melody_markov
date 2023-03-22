@@ -23,7 +23,7 @@ Markov chain "decides" what state to go to next, after having been at a specific
 
 ## Input and output
 
-Input will be a melody sung or played to computer microphone. Recording is made of that. Output will be a melody played. Program gets the beginning of a melody as input and returns a full melody, that is the beginning of what it got, and what it generated to continue the melody
+Input will be a melody given in ABC notation. Recording is made of that. Output will be a melody played. Program gets the beginning of a melody as input and returns a full melody, that is the beginning of what it got, and what it generated to continue the melody
 
 ## Efficiency targets
 Not set
