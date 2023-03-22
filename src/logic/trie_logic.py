@@ -15,7 +15,7 @@ class TrieNode:
         self.counter = 0
         self.children = {}
 
-class Trie():
+class Trie:
     """Trie data structure for melodies"""
     def __init__(self):
         """ The root has an empty string as note.
