@@ -8,6 +8,10 @@ class TestTrie(unittest.TestCase):
     def test_trie_root_has_empty_note(self):
         self.assertEqual(self.t.root.note, "")
 
+    def test_trie_does_not_find_sequence_when_empty(self):
+        result = self.t.query("A")
+        self.assertEqual(result, [])
+
     def test_trie_finds_inserted_sequence_with_right_start(self):
         self.t.insert("ABC")
         result = self.t.query("A")
@@ -17,3 +21,5 @@ class TestTrie(unittest.TestCase):
         self.t.insert("ABC")
         result = self.t.query("B")
         self.assertEqual(result, [])
+
+    
