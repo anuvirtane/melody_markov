@@ -100,6 +100,17 @@ test = ["matplotlib", "pillow", "pytest"]
 test-no-images = ["pytest"]
 
 [[package]]
+name = "coverage"
+version = "7.2.2"
+description = "Code coverage measurement for Python"
+category = "main"
+optional = false
+python-versions = ">=3.7"
+
+[package.extras]
+toml = ["tomli"]
+
+[[package]]
 name = "cycler"
 version = "0.11.0"
 description = "Composable style cycles"
@@ -576,7 +587,7 @@ testing = ["pytest (>=6)", "pytest-checkdocs (>=2.4)", "flake8 (<5)", "pytest-co
 [metadata]
 lock-version = "1.1"
 python-versions = "=3.9"
-content-hash = "4ecca595d881d246f179ec1c50cb293883b9cb1798900d25850fa47c433aeb72"
+content-hash = "28b438db42644c4f9738309631328409604dc20deee9f56903d1a86e3adc237d"
 
 [metadata.files]
 astroid = []
@@ -588,6 +599,7 @@ chardet = []
 charset-normalizer = []
 colorama = []
 contourpy = []
+coverage = []
 cycler = []
 dill = []
 exceptiongroup = []
