@@ -4,6 +4,12 @@ Helsinki university Algorithms and data structures student project.
 
 [Project definition](documentation/project_definition.md)
 
+[Week 1 progress report](documentation/progress_report_week_1.md)
+
+[Week 2 progress report](documentation/progress_report_week_2.md)
+
+If you have Python and Poetry installed, you can run project.
+
 Install dependencies with command
 
     poetry install
