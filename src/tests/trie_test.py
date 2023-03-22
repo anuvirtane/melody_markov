@@ -5,5 +5,6 @@ class TestTrie(unittest.TestCase):
     def setUp(self):
         print("Set up goes here")
 
-    def test_(self):
-        self.assertEqual("Hello world", "Hello world")
+    def test_trie_root_has_empty_note(self):
+        t = trie_logic.Trie()
+        self.assertEqual(t.root.note, "")
