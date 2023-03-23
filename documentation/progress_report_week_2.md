@@ -15,6 +15,7 @@ Time spent: 2,5 h
 Play with the simple Trie. Make unit tests for it. Add test coverage and pylint.
 Time spent: 2 h
 
-Find out why test coverage was so low. Add .coveragerc file to exclude test folders from coverage. Also write a couple more unit tests.
+Find out why test coverage was so low. Add .coveragerc file to exclude test folders from coverage. Also write a couple more unit tests. Read more about ABC notation. Chords implementation would maybe work best.
 
-Time spent in total: 10,5 h
+Time spent in total: 11 h
+
