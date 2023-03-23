@@ -4,6 +4,10 @@ from logic import trie_logic
 class TestTrie(unittest.TestCase):
     def setUp(self):
         self.t = trie_logic.Trie()
+        self.tn = trie_logic.TrieNode("A")
+
+    def test_node_has_note(self):
+        self.assertEqual(self.tn.note, "A")
 
     def test_trie_root_has_empty_note(self):
         self.assertEqual(self.t.root.note, "")
@@ -21,5 +25,14 @@ class TestTrie(unittest.TestCase):
         self.t.insert("ABC")
         result = self.t.query("B")
         self.assertEqual(result, [])
+
+    def test_trie_has_output_when_it_has_been_queried(self):
+        self.t.insert("ABC")
+        self.t.query("A")
+        self.assertEqual(len(self.t.output), 1)
+
+    def test_trie_counter_increment_when_melody_is_inserted_for_first_time(self):
+        self.t.insert("ABC")
+        
 
     
