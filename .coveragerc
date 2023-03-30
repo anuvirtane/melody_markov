@@ -1,2 +1,2 @@
-[run]
+[run] source=src
 omit = *tests*
