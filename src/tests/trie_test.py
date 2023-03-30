@@ -31,8 +31,6 @@ class TestTrie(unittest.TestCase):
         self.t.query("A")
         self.assertEqual(len(self.t.output), 1)
 
-    def test_trie_counter_increment_when_melody_is_inserted_for_first_time(self):
-        self.t.insert("ABC")
-        
+
 
     
