@@ -10,6 +10,8 @@ Helsinki university Algorithms and data structures student project.
 
 [Test coverage report](https://anuvirtane.github.io/melody_markov/)
 
+[Test documentation](documentation/testing.md)
+
 If you have Python and Poetry installed, you can run project.
 
 Install dependencies with command
