@@ -1,6 +1,6 @@
 # Testing of project
 
-Currently project contains unit tests for Trie functionality.
+Currently project contains unit tests for Trie functionality. Also pylint is used.
 
 ## Coverage of unit tests
 
