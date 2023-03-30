@@ -6,11 +6,10 @@ import pygame
 
 s = converter.parse('logic/expanded.abc')
 s.write('midi', fp='output.mid')
-pygame.init()
+pygame.init() # pylint: disable=[no-member]
 clock = pygame.time.Clock()
 pygame.mixer.music.load("output.mid")
 pygame.mixer.music.play()
 while pygame.mixer.music.get_busy():
     pygame.event.poll()
     clock.tick(10)
-
