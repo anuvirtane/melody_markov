@@ -4,11 +4,11 @@ Instead of notes, chords can be used."""
 class TrieNode:
     """Single node, building block of trie structure.
     Attributes:
-    - note in ABC notation
-    - whether melody ends here
-    - how many times this particular melody has been inserted
+    - self. note: note in ABC notation
+    - self.is_end: whether melody ends here
+    - self.counter: how many times this particular melody has been inserted
       (if this node has is_end set to True)
-    - child nodes, dict contains notes as keys, and nodes as values"""
+    - self.children: child nodes, dict contains notes as keys, and nodes as values"""
     def __init__(self, note: str):
         self.note = note
         self.is_end = False
