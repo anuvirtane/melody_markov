@@ -45,7 +45,7 @@ class Trie:
         node.is_end = True
         node.counter += 1
 
-    def dfs(self, node: TrieNode, melody_start: str):
+    def _dfs(self, node: TrieNode, melody_start: str):
         """Depth first search through the trie.
         node: starting node.
         melody_start: start of melody to look for
@@ -53,7 +53,7 @@ class Trie:
         if node.is_end:
             self.output.append((melody_start + node.note, node.counter))
         for child in node.children.values():
-            self.dfs(child, melody_start + node.note)
+            self._dfs(child, melody_start + node.note)
 
     def query(self, melody_start: str) -> list:
         """Use input string (one or multiple notes that melody starts with)
@@ -68,6 +68,6 @@ class Trie:
                 node = node.children[note]
             else:
                 return []
-        self.dfs(node, melody_start[:-1])
+        self._dfs(node, melody_start[:-1])
         return sorted(self.output, key=lambda x: x[1], reverse=True)
     
