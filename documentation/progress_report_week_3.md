@@ -12,4 +12,7 @@ Time spent: 1 h
 Experiment with inserting abc notes parsed into Trie. Add preliminary testing implementation of this.
 Time spent: 1 h
 
-TODO: unit tests for note logic
+Turn note logic into a class. Add one unit test. try to get python coverage to cover src/logic still (is not covering it).
+time spent: 2 h
+
+Total time spent: 7 h
