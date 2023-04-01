@@ -1,2 +1,3 @@
-[run] source=src
-omit = *tests*
+[run]
+source = *logic*
+omit = *music*, *test*
