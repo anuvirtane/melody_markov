@@ -17,3 +17,7 @@ Currently project contains unit tests for Trie functionality. Also pylint is use
 - Trie Node has right note attribute
 - Trie root node has empty note attribute
 
+## Notes saving into tries functionality
+
+- Working tests not implemented yet
+
