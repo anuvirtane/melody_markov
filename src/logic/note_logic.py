@@ -1,10 +1,7 @@
 """Parse all abc notes available and insert into Trie if key is just one letter long."""
 
 from sjkabc import parse_dir
-try:
-    from . import trie_logic # pylint: disable=[import-error]
-except:
-    import trie_logic
+import trie_logic
 
 class TriesByKeys:
     def __init__(self):
