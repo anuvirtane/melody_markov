@@ -39,6 +39,18 @@ python-versions = "*"
 numpy = "*"
 
 [[package]]
+name = "autopep8"
+version = "2.0.2"
+description = "A tool that automatically formats Python code to conform to the PEP 8 style guide"
+category = "main"
+optional = false
+python-versions = ">=3.6"
+
+[package.dependencies]
+pycodestyle = ">=2.10.0"
+tomli = {version = "*", markers = "python_version < \"3.11\""}
+
+[[package]]
 name = "certifi"
 version = "2022.12.7"
 description = "Python package for providing Mozilla's CA Bundle."
@@ -192,6 +204,14 @@ description = "brain-dead simple config-ini parsing"
 category = "main"
 optional = false
 python-versions = ">=3.7"
+
+[[package]]
+name = "invoke"
+version = "2.0.0"
+description = "Pythonic task execution"
+category = "main"
+optional = false
+python-versions = ">=3.6"
 
 [[package]]
 name = "isort"
@@ -350,6 +370,14 @@ python-versions = ">=3.6"
 [package.extras]
 dev = ["pre-commit", "tox"]
 testing = ["pytest", "pytest-benchmark"]
+
+[[package]]
+name = "pycodestyle"
+version = "2.10.0"
+description = "Python style guide checker"
+category = "main"
+optional = false
+python-versions = ">=3.6"
 
 [[package]]
 name = "pycparser"
@@ -602,12 +630,13 @@ testing = ["pytest (>=6)", "pytest-checkdocs (>=2.4)", "flake8 (<5)", "pytest-co
 [metadata]
 lock-version = "1.1"
 python-versions = "=3.9"
-content-hash = "efd3e3a9a003c829de26ba5373075fdae81f0c04b51ff102917b978caf9579c0"
+content-hash = "10f8c46f91f6634ebfedd454b69a90c393cefd95d93bb3fad1a510f27c010201"
 
 [metadata.files]
 astroid = []
 attrs = []
 aubio = []
+autopep8 = []
 certifi = []
 cffi = []
 chardet = []
@@ -622,6 +651,7 @@ fonttools = []
 idna = []
 importlib-resources = []
 iniconfig = []
+invoke = []
 isort = []
 joblib = []
 jsonpickle = []
@@ -639,6 +669,7 @@ pluggy = [
     {file = "pluggy-1.0.0-py2.py3-none-any.whl", hash = "sha256:74134bbf457f031a36d68416e1509f34bd5ccc019f0bcc952c7b909d06b37bd3"},
     {file = "pluggy-1.0.0.tar.gz", hash = "sha256:4224373bacce55f955a878bf9cfa763c1e360858e330072059e10bad68531159"},
 ]
+pycodestyle = []
 pycparser = []
 pygame = []
 pylint = []
