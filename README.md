@@ -28,6 +28,6 @@ Then use command
 
     pytest src
 
-Generate test coverage report (while in poetry shell) using command
+Generate test coverage report (while not in poetry shell) using command
 
-    coverage html
+    poetry run invoke coverage
