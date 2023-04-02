@@ -15,4 +15,7 @@ Time spent: 1 h
 Turn note logic into a class. Add one unit test. try to get python coverage to cover src/logic still (is not covering it).
 time spent: 2 h
 
-Total time spent: 7 h
+Add tasks.py to make coverage work. Made it to a situation that it covers EVERYTHING now so not perfect (would like it to cover only code parts) but at least this is better than it covering just one file which it did before.
+Time spent: 1 h
+
+Total time spent: 8 h
