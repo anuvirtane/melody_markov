@@ -4,7 +4,7 @@ from invoke import task
 def coverage(ctx):
     ctx.run("coverage run --branch -m pytest", pty=True)
 
-@task()
+@task
 def coverage_report(ctx):
     ctx.run("coverage html", pty=True)
 

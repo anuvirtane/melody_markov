@@ -20,14 +20,10 @@ Install dependencies with command
 
     poetry install
 
-To run unit tests start poetry shell with command
+Run all unit tests using command
 
-    poetry shell
-
-Then use command
-
-    pytest src
+    poetry run invoke coverage
 
 Generate test coverage report (while not in poetry shell) using command
 
-    poetry run invoke coverage
+    poetry run invoke coverage-report
