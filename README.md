@@ -10,6 +10,8 @@ Helsinki university Algorithms and data structures student project.
 
 [Week 3 progress report](documentation/progress_report_week_3.md)
 
+[Week 4 progress report](documentation/progress_report_week_4.md)
+
 [Test coverage report](https://anuvirtane.github.io/melody_markov/) from last week. Did not get it to work this week.
 
 [Test documentation](documentation/testing.md)
