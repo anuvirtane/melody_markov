@@ -25,7 +25,11 @@ class TriesByKeys:
                         trie = trie_logic.Trie()
                         self.tries[key] = trie
                     abc = tune.expanded_abc.replace(self.strip, "")
-                    self.tries[key].insert(abc)
+                    abc_cleaned = ""
+                    for char in abc:
+                        if char in ["z", "a", "b", "c", "d", "e", "f", "g"]:
+                            abc_cleaned = abc_cleaned + char
+                    self.tries[key].insert(abc_cleaned)
 
     def get_trie_keys(self):
         """Returns all available keys"""
