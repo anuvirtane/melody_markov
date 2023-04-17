@@ -1,6 +1,8 @@
 """Trie data structure for storing melodies in ABC notation.
 Instead of notes, chords can be used."""
 
+import sys
+
 class TrieNode:
     """Single node, building block of trie structure.
     Attributes:
@@ -24,6 +26,7 @@ class Trie:
         """
         self.root = TrieNode("")
         self.output = []
+        sys.setrecursionlimit(10**7)
 
     def insert(self, melody: list):
         """Insert a melody into Trie.
