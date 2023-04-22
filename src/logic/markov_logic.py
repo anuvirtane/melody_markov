@@ -23,5 +23,5 @@ class MarkovChain:
         # add possible transitions, like [["aa","ab","ac"],["cc","ca","cb"],["bb","ba","bc"]]
         # add transition matrix: probabilities of transitions like [[0.2,0.6,0.2],[0.1,0.6,0.3],[0.2,0.7,0.1]]
 
-    def generate_melody(self, melody_start: str):
+    def generate_melody(self, melody_start: str, key: str):
         pass
