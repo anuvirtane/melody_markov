@@ -1,5 +1,4 @@
-"""Trie data structure for storing melodies in ABC notation.
-Instead of notes, chords can be used."""
+"""Trie data structure for storing melodies in ABC notation."""
 
 import sys
 
@@ -22,13 +21,11 @@ class Trie:
     def __init__(self):
         """ The root has an empty string as note.
         That way when querying with "" as input it finds "everything".
-        Trie has output list, that is used to return query results.
         """
         self.root = TrieNode("")
-        self.output = []
         sys.setrecursionlimit(10**7)
 
-    def insert(self, melody: list):
+    def insert(self, melody: str):
         """Insert a melody into Trie.
         Start from the root node.
         Go through nodes and if note is not found in Trie nodes,
@@ -47,30 +44,37 @@ class Trie:
                 node = new_node
         node.is_end = True
         node.counter += 1
-
-    def _dfs(self, node: TrieNode, melody_start: str):
-        """Depth first search through the trie.
-        node: starting node.
-        melody_start: start of melody to look for
+    
+    def get_following_notes(self, state: int):
         """
-        if node.is_end:
-            self.output.append((melody_start + node.note, node.counter))
-        for child in node.children.values():
-            self._dfs(child, melody_start + node.note)
-
-    def query(self, melody_start: str) -> list:
-        """Use input string (one or multiple notes that melody starts with)
-        to retrieve all melodies stored in
-        the trie with that starting sequence sorted by the number of
-        times they have been inserted. Return them in list.
+        Depth first search through the trie to find notes that come after a sequence of notes
+        of wanted length (state).
+        Args:
+            state (int): How many notes' sequence to consider in getting followers.
+        Returns:
+            following_notes (dict): A nested dictionary. Keys are note sequences of wanted length (state)
+            and values are dictionaries that contain following note as key and its frequency in Trie as value.
+            Example: If only one melody is inserted ('adcf'), then get_following_notes(3) returns
+            {'adc': {'f': 1}} 
         """
-        self.output.clear()
-        node = self.root
-        for note in melody_start:
-            if note in node.children:
-                node = node.children[note]
-            else:
-                return []
-        self._dfs(node, melody_start[:-1])
-        return sorted(self.output, key=lambda x: x[1], reverse=True)
+        following_notes = {}
+
+        def _dfs(node: TrieNode, melody_start: str):
+            if node.is_end:
+                notes = melody_start.split()
+                if len(notes) >= state:
+                    for i in range(len(notes) - state + 1):
+                        next = "".join(notes[i:i+state])
+                        if i+state < len(notes): 
+                            follower = notes[i+state]   
+                            if next not in following_notes:
+                                following_notes[next] = {}
+                            if follower not in following_notes[next]:
+                                following_notes[next][follower] = 0
+                            following_notes[next][follower] += 1
+            for child_note, child_node in node.children.items():
+                _dfs(child_node, melody_start + ' ' + child_note)
+
+        _dfs(self.root, '')
+        return following_notes
     
