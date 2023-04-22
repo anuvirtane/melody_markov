@@ -9,6 +9,7 @@ Time spent: 1 h
 Make Trie return dictionaries that contain followers of note sequences of wanted length (state).
 Time spent: 2 h
 
+Continue work on Markov Chain
 
 
 

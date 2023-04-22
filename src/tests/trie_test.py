@@ -13,23 +13,14 @@ class TestTrie(unittest.TestCase):
         self.assertEqual(self.t.root.note, "")
 
     def test_trie_does_not_find_sequence_when_empty(self):
-        result = self.t.query("A")
-        self.assertEqual(result, [])
+        result = self.t.get_following_notes(1)
+        self.assertEqual(result, {})
 
-    def test_trie_finds_inserted_sequence_with_right_start(self):
+    def test_trie_returns_inserted_sequence(self):
         self.t.insert("ABC")
-        result = self.t.query("A")
-        self.assertEqual(result, [('ABC', 1)])
+        result = self.t.get_following_notes(1)
+        self.assertEqual(result, {'A': {'B': 1}, 'B': {'C': 1}})
     
-    def test_trie_does_not_find_inserted_sequence_with_wrong_start(self):
-        self.t.insert("ABC")
-        result = self.t.query("B")
-        self.assertEqual(result, [])
-
-    def test_trie_has_output_when_it_has_been_queried(self):
-        self.t.insert("ABC")
-        self.t.query("A")
-        self.assertEqual(len(self.t.output), 1)
 
 
 

@@ -6,9 +6,6 @@ try:
 except:
     from . import note_logic
 
-#     # The statespace
-# states = ["Sleep","Icecream","Run"]
-
 # # Possible sequences of events
 # transitionName = [["SS","SR","SI"],["RS","RR","RI"],["IS","IR","II"]]
 
@@ -25,3 +22,6 @@ class MarkovChain:
         # after making Trie return possible transitions, 
         # add possible transitions, like [["aa","ab","ac"],["cc","ca","cb"],["bb","ba","bc"]]
         # add transition matrix: probabilities of transitions like [[0.2,0.6,0.2],[0.1,0.6,0.3],[0.2,0.7,0.1]]
+
+    def generate_melody(self, melody_start: str):
+        pass

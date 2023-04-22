@@ -14,20 +14,30 @@ Helsinki university Algorithms and data structures student project.
 
 [Week 5 progress report](documentation/progress_report_week_5.md)
 
-[Test coverage report](https://anuvirtane.github.io/melody_markov/) from last week. Did not get it to work this week.
+[Test coverage report](https://anuvirtane.github.io/melody_markov/)
 
 [Test documentation](documentation/testing.md)
 
 If you have Python and Poetry installed, you can run project.
 
-Install dependencies with command
+
+### Install dependencies 
 
     poetry install
 
-Run all unit tests using command
+### Run all unit tests
 
     poetry run invoke coverage
 
-Generate test coverage report (while not in poetry shell) using command
+### Generate test coverage report
+
+
+First navigate to src folder
+
+    cd src
+
+Then run command
 
     poetry run invoke coverage-report
+
+Coverage report is then generated in htmlcov folder inside src folder
