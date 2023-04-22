@@ -1,3 +1,5 @@
+"""Tasks are made to 'shorten' commands while using poetry"""
+
 from invoke import task
 
 @task
