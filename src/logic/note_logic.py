@@ -32,7 +32,9 @@ class TriesByKeys:
                     self.tries[key].insert(abc_cleaned)
 
     def get_trie_keys(self):
-        """Returns all available keys"""
+        """Returns all available keys as dict keys formatted like so:
+        dict_keys(['D', 'G', 'A', 'C', 'F'])
+        """
         return self.tries.keys() # pylint: disable=[consider-iterating-dictionary]
 
     def get_following_notes_by_key(self, key: str, predecessors_amount: int = 1):
