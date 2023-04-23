@@ -35,9 +35,9 @@ class TriesByKeys:
         """Returns all available keys"""
         return self.tries.keys() # pylint: disable=[consider-iterating-dictionary]
 
-    def query_by_key(self, key: str, query: str):
-        """Queries if wanted string is in trie by wanted key"""
+    def get_following_notes_by_key(self, key: str, predecessors_amount: int = 1):
+        """Returns dict with following notes by wanted key"""
         if key not in self.tries.keys(): # pylint: disable=[consider-iterating-dictionary]
             return "No data available for this key"
-        return self.tries[key].query(query)
+        return self.tries[key].get_following_notes(predecessors_amount)
         
