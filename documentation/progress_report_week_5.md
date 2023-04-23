@@ -12,10 +12,10 @@ Time spent: 2 h
 Add simple melody generating function to Markov Chain class. It does not take input argument yet.
 Time spent: 1 h
 
-try to make note tests work. They don't seem to find test_notes files.
-Time spent: 0,5 h
+try to make note tests work. They don't seem to find test_notes files. Add very simple index.py content that generates melody without user input. Add invoke task run run this basic application.
+Time spent: 2,5
 
-Start making UI?
+Time spent altogether: 9 h
 
 
 
