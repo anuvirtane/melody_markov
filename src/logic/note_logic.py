@@ -1,6 +1,7 @@
 """Parse all abc notes available and insert into Trie if key is just one letter long."""
 
 from sjkabc import parse_dir
+import os
 try:
     import trie_logic # pylint: disable=[import-error]
 except:
@@ -17,6 +18,8 @@ class TriesByKeys:
     def insert_notes_from_dir(self, path: str='../../abc-notes/'):
         """Parses all abc notes in given directory and inserts them in self.tries
         if their keys are one character long"""
+        if not os.path.isdir(path):
+            raise FileNotFoundError("Got directory that is not a directory as argument")
         for tune in parse_dir(path):
             if len(tune.key) == 1:
                 key = tune.key[0]

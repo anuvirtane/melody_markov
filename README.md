@@ -25,6 +25,11 @@ If you have Python and Poetry installed, you can run project.
 
     poetry install
 
+
+### Run very basic version of application without GUI
+
+    poetry run invoke start
+
 ### Run all unit tests
 
     poetry run invoke coverage

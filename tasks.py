@@ -10,3 +10,7 @@ def coverage(ctx):
 def coverage_report(ctx):
     ctx.run("coverage html", pty=True)
 
+@task
+def start(ctx):
+    ctx.run("python3 src/index.py", pty=True)
+
