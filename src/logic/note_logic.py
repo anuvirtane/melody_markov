@@ -19,7 +19,7 @@ class TriesByKeys:
         """Parses all abc notes in given directory and inserts them in self.tries
         if their keys are one character long"""
         if not os.path.isdir(path):
-            raise FileNotFoundError("Got directory that is not a directory as argument")
+            raise FileNotFoundError(f"Got directory that is not a directory as argument: {path}")
         for tune in parse_dir(path):
             if len(tune.key) == 1:
                 key = tune.key[0]
