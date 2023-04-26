@@ -30,11 +30,11 @@ class UI:
         print(f"Key chosen is {key.upper()}")
         mc = markov_logic.MarkovChain(self.path, key.upper())
         print("You can generate melody from scratch or by inputting beginning of melody.\n")
-        print("Shorter input is likely to result in longer melody result.\n")
         melody_start = str(input("Input wanted beginning of melody as text that contains note letters (a, b, c, d, e, f, g, z). z means pause in melody: "))
         if not melody_start:
             print("For empty input, a melody start is randomly chosen.")
         else:
+            melody_start = melody_start.replace(" ", "")
             print(f"Melody will start like this: {melody_start}")
         melody = mc.generate_melody(melody_start)
         with open("src/music/generated.abc", "w") as abc_file:
