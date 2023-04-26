@@ -1,4 +1,5 @@
-"""Run text based user-interface capable of generating and playing melodies"""
+"""Run text based user-interface with
+functionality capable of generating and playing melodies"""
 
 from ui import ui
 
