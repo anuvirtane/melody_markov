@@ -4,7 +4,7 @@ from logic import markov_logic # pylint: disable=[import-error]
 from music import abc_to_mid
 from random import choice
 import pygame
-import os
+import importlib
 
 class UI:
     def __init__(self):
@@ -43,10 +43,9 @@ class UI:
             abc_file.write(melody)
         abc_to_mid
         print(f"Generated a melody from teaching data in key {key}")
-        print("In order to play this melody, you need to exit and re-start program.")
         
     def play(self):
-        print("In order to play melody generated during running this program this time, you need to exit and re-start program.")
+        importlib.reload(abc_to_mid)
         pygame.quit()
         pygame.init() # pylint: disable=[no-member]
         pygame.mixer.init()

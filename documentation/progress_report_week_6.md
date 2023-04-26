@@ -12,4 +12,7 @@ Time spent: 2 h
 Add description of how project works at the moment to README.
 Time spent: 0,5 h
 
-Total time spent: 5 h
+Use importlib's reload function to get melody refreshed. Yay!
+Time spent. 0,25 h
+
+Total time spent: 5,25 h

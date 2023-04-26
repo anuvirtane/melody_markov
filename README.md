@@ -32,7 +32,6 @@ If you have Python and Poetry installed, you can run project.
 
     poetry run invoke start
 
-NB: If you want to play melody you generated now, you need to exit program and re-start it.
 
 ### Run all unit tests
 
