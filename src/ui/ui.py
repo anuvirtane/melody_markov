@@ -43,8 +43,10 @@ class UI:
             abc_file.write(melody)
         abc_to_mid
         print(f"Generated a melody from teaching data in key {key}")
+        print("In order to play this melody, you need to exit and re-start program.")
         
     def play(self):
+        print("In order to play melody generated during running this program this time, you need to exit and re-start program.")
         pygame.quit()
         pygame.init() # pylint: disable=[no-member]
         pygame.mixer.init()
@@ -52,7 +54,7 @@ class UI:
         pygame.mixer.music.play()
         while pygame.mixer.music.get_busy():
             pygame.event.poll()
-        print("Finished playing")
+        print("Finished playing melody that was generated when program was last started")
         pygame.quit()
 
     def initialize(self):
