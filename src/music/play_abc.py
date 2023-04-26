@@ -16,6 +16,8 @@ while pygame.mixer.music.get_busy():
     pygame.event.poll()
     clock.tick(10)
 
+print("Now pygame is playing")
+
 
 
 
