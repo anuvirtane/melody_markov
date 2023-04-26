@@ -26,7 +26,7 @@ class UI:
         if not key or key.upper() not in self.keys:
             key = choice(self.keys)
         print(f"Key chosen is {key}")
-        mc = markov_logic.MarkovChain(self.path, key)
+        mc = markov_logic.MarkovChain(self.path, key.upper())
         print("You can generate melody from scratch or by inputting beginning of melody.\n")
         print("Shorter input is likely to result in longer melody result.\n")
         melody_start = str(input("Input wanted beginning of melody as text that contains note letters (a, b, c, d, e, f, g, z). z means Pause in melody: "))
