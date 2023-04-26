@@ -2,6 +2,7 @@
 
 from sjkabc import parse_dir
 import os
+
 try:
     import trie_logic # pylint: disable=[import-error]
 except:
@@ -40,7 +41,7 @@ class TriesByKeys:
         """
         return self.tries.keys() # pylint: disable=[consider-iterating-dictionary]
 
-    def get_following_notes_by_key(self, key: str, predecessors_amount: int = 1):
+    def get_following_notes_by_key(self, key: str, predecessors_amount: int):
         """Returns dict with following notes by wanted key"""
         if key not in self.tries.keys(): # pylint: disable=[consider-iterating-dictionary]
             return {}
