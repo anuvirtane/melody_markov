@@ -8,3 +8,5 @@ Time spent: 1,5 h.
 
 Add text based user interface. Pygame plays previous melody when UI is started and does not play with play command. Oh well..
 Time spent: 2 h
+
+14.50
