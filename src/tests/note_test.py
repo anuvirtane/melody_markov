@@ -9,6 +9,8 @@ class TestTriesInKeys(unittest.TestCase):
         self.tries.insert_notes_from_dir(path="src/tests/test_notes/longkey")
         keys = self.tries.get_trie_keys()
         self.assertEqual(keys, set([]))
+
+    
     
 
 

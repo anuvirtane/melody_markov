@@ -44,5 +44,5 @@ class TriesByKeys:
         """Returns dict with following notes by wanted key"""
         if key not in self.tries.keys(): # pylint: disable=[consider-iterating-dictionary]
             return {}
-        return self.tries[key].get_following_notes(predecessors_amount)
+        return self.tries[key].get_following_notes_with_frequencies(predecessors_amount)
         

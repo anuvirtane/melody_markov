@@ -45,7 +45,7 @@ class Trie:
         node.is_end = True
         node.counter += 1
     
-    def get_following_notes(self, predecessors_amount: int):
+    def get_following_notes_with_frequencies(self, predecessors_amount: int):
         """
         Depth first search through the trie to find notes that come after a sequence of notes
         of wanted length (predecessors_amount).
@@ -54,7 +54,7 @@ class Trie:
         Returns:
             following_notes (dict): A nested dictionary. Keys are note sequences of wanted length (predecessors_amount)
             and values are dictionaries that contain following note as key and its frequency in Trie as value.
-            Example: If only one melody is inserted ('adcf'), then get_following_notes(3) returns
+            Example: If only one melody is inserted ('adcf'), then get_following_notes_with_frequencies(3) returns
             {'adc': {'f': 1}} 
         """
         following_notes = {}
