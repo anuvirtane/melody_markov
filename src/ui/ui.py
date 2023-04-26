@@ -53,7 +53,7 @@ class UI:
         pygame.mixer.music.play()
         while pygame.mixer.music.get_busy():
             pygame.event.poll()
-        print("Finished playing melody that was generated when program was last started")
+        print("Finished playing melody")
         pygame.quit()
 
     def initialize(self):
