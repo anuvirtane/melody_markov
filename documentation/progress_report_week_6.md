@@ -1,4 +1,4 @@
 # Week 6 progress report
 
-10.10
-Small changes suggested in feedback.
+Implement small changes suggested in feedback. Make peer review for week 5.
+Time spent: 1 h
