@@ -40,11 +40,11 @@ class TriesByKeys:
         """Returns all available keys as dict keys formatted like so:
         dict_keys(['D', 'G', 'A', 'C', 'F'])
         """
-        return self.tries.keys() # pylint: disable=[consider-iterating-dictionary]
+        return self.tries.keys()
 
     def get_following_notes_by_key(self, key: str, predecessors_amount: int):
         """Returns dict with following notes by wanted key"""
-        if key not in self.tries.keys(): # pylint: disable=[consider-iterating-dictionary]
+        if key not in self.tries.keys():
             return {}
         return self.tries[key].get_following_notes_with_frequencies(predecessors_amount)
         
