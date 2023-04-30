@@ -13,12 +13,12 @@ class TestTrie(unittest.TestCase):
         self.assertEqual(self.t.root.note, "")
 
     def test_trie_does_not_find_sequence_when_empty(self):
-        result = self.t.get_following_notes(1)
+        result = self.t.get_following_notes_with_frequencies(1)
         self.assertEqual(result, {})
 
     def test_trie_returns_inserted_sequence(self):
         self.t.insert("ABC")
-        result = self.t.get_following_notes(1)
+        result = self.t.get_following_notes_with_frequencies(1)
         self.assertEqual(result, {'A': {'B': 1}, 'B': {'C': 1}})
     
 

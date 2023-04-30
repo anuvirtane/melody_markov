@@ -10,6 +10,13 @@ class TestTriesInKeys(unittest.TestCase):
         keys = self.tries.get_trie_keys()
         self.assertEqual(keys, set([]))
 
+    # def test_trie_returns_only_key_it_contains(self):
+    #     self.tries = {'A': {}}
+    #     keys = self.tries.get_trie_keys()
+    #     self.assertEqual(keys, "")
+
+
+
     
     
 
