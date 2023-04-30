@@ -44,18 +44,23 @@ class Trie:
                 node = new_node
         node.is_end = True
         node.counter += 1
-    
+
     def get_following_notes_with_frequencies(self, predecessors_amount: int):
         """
-        Depth first search through the trie to find notes that come after a sequence of notes
+        Depth first search through the trie to find notes
+        that come after a sequence of notes
         of wanted length (predecessors_amount).
         Args:
-            predecessors_amount (int): How many notes' sequence to consider in getting followers.
+            predecessors_amount (int): How many notes'
+            sequence to consider in getting followers.
         Returns:
-            following_notes (dict): A nested dictionary. Keys are note sequences of wanted length (predecessors_amount)
-            and values are dictionaries that contain following note as key and its frequency in Trie as value.
-            Example: If only one melody is inserted ('adcf'), then get_following_notes_with_frequencies(3) returns
-            {'adc': {'f': 1}} 
+            following_notes (dict): A nested dictionary.
+            Keys are note sequences of wanted length (predecessors_amount)
+            and values are dictionaries that contain following note as key
+            and its frequency in Trie as value.
+            Example: If only one melody is inserted ('adcf'),
+            then get_following_notes_with_frequencies(3) returns
+            {'adc': {'f': 1}}
         """
         following_notes = {}
 
@@ -64,14 +69,14 @@ class Trie:
                 notes = melody_start.split()
                 if len(notes) >= predecessors_amount:
                     for i in range(len(notes) - predecessors_amount + 1):
-                        next = "".join(notes[i:i + predecessors_amount])
-                        if i + predecessors_amount < len(notes): 
-                            follower = notes[i + predecessors_amount]   
-                            if next not in following_notes:
-                                following_notes[next] = {}
-                            if follower not in following_notes[next]:
-                                following_notes[next][follower] = 0
-                            following_notes[next][follower] += 1
+                        next_note = "".join(notes[i:i + predecessors_amount])
+                        if i + predecessors_amount < len(notes):
+                            follower = notes[i + predecessors_amount]
+                            if next_note not in following_notes:
+                                following_notes[next_note] = {}
+                            if follower not in following_notes[next_note]:
+                                following_notes[next_note][follower] = 0
+                            following_notes[next_note][follower] += 1
             for child_note, child_node in node.children.items():
                 _dfs(child_node, melody_start + ' ' + child_note)
 

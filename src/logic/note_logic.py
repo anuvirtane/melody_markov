@@ -1,10 +1,11 @@
 """Parse all abc notes available and insert into Trie if key is just one letter long."""
 
-from sjkabc import parse_dir
 import os
+from sjkabc import parse_dir
+
 
 try:
-    import trie_logic # pylint: disable=[import-error]
+    import trie_logic
 except:
     from . import trie_logic
 
@@ -25,7 +26,7 @@ class TriesByKeys:
             if len(tune.key) == 1:
                 key = tune.key[0]
                 if len(key) == 1:
-                    if tune.key[0] not in self.tries.keys(): # pylint: disable=[consider-iterating-dictionary]
+                    if tune.key[0] not in self.tries.keys():
                         trie = trie_logic.Trie()
                         self.tries[key] = trie
                     abc = tune.expanded_abc.replace(self.strip, "")

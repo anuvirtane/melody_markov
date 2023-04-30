@@ -30,7 +30,7 @@ class MarkovChain:
         """
         if not given_start:
             predecessors_amount = max_length
-        else:    
+        else:
             predecessors_amount = len(given_start)
             chosen_start = given_start
         following_notes = self.tries.get_following_notes_by_key(self.key, predecessors_amount)
@@ -48,5 +48,3 @@ class MarkovChain:
                 next_note = random.choice(notes_as_weighted_possibilities_list)
             melody.append(next_note)
         return "".join(melody)
-
- 
