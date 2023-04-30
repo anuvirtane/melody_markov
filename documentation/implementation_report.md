@@ -2,7 +2,7 @@
 
 ## General structure 
 
-![Structure diagram](images/diagram.jpg)
+![Structure diagram](images/mc_diagram.jpg)
 
 
 
