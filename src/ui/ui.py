@@ -1,6 +1,6 @@
 """Simple text based user interface for generating and playing melodies"""
 
-from logic import markov_logic # pylint: disable=[import-error]
+from logic import markov_logic
 from music import abc_to_mid
 from random import choice
 import pygame
