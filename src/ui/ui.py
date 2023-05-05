@@ -58,7 +58,7 @@ class UI:
 
     def initialize(self):
         while True:
-            cmd = input("Input command, 'exit' to close, 'help' for a list of commands" + "\n")
+            cmd = input("\nInput command, 'exit' to close, 'help' for a list of commands" + "\n")
             if cmd == "exit":
                 break
             elif cmd in self.commands:
