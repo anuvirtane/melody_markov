@@ -46,7 +46,6 @@ class UI:
         
     def play(self):
         importlib.reload(abc_to_mid)
-        pygame.quit()
         pygame.init() # pylint: disable=[no-member]
         pygame.mixer.init()
         pygame.mixer.music.load(self.filepath)
