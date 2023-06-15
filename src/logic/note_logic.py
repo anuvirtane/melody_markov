@@ -34,7 +34,13 @@ class TriesByKeys:
                     for char in abc:
                         if char in ["z", "a", "b", "c", "d", "e", "f", "g"]:
                             abc_cleaned = abc_cleaned + char
-                    self.tries[key].insert(abc_cleaned)
+                    for i in range(len(abc_cleaned)):
+                        if i+5 < len(abc_cleaned):
+                            end_index = 5
+                        else: 
+                            end_index = len(abc_cleaned) - i
+                        abc_chars_five_or_less = abc_cleaned[i:i+end_index]
+                        self.tries[key].insert(abc_chars_five_or_less)
 
     def get_trie_keys(self):
         """Returns all available keys as dict keys formatted like so:
