@@ -1,6 +1,6 @@
 [run]
 source = *logic*
-omit = *music*, *test*
+omit = *music*, *test*, *tests*
 
 [html]
 directory = docs
