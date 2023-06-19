@@ -15,6 +15,10 @@ class TestTriesInKeys(unittest.TestCase):
         keys = self.tries.get_trie_keys()
         self.assertEqual(keys, set(['D']))
 
+    def test_get_notes_contains_what_it_should(self):
+        self.tries.insert_notes_from_dir(path="src/tests/test-notes/shortkey/")
+        possibilities_dict = self.tries.get_following_notes_by_key("D", predecessors_amount=2)
+        self.assertTrue('az' in possibilities_dict and possibilities_dict['az'] == {"b": 1})
 
 
     
