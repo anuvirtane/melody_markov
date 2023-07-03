@@ -33,10 +33,17 @@ class UI:
         melody_start = str(input("Input wanted beginning of melody as text that contains note letters (a, b, c, d, e, f, g, z). z means pause in melody: "))
         if not melody_start:
             print("For empty input, a melody start is randomly chosen.")
+            states = 2
         else:
             melody_start = melody_start.replace(" ", "")
             print(f"Melody will start like this: {melody_start}")
-        melody = mc.generate_melody(melody_start)
+            states = str(input("How many previous notes do you wish to consider? Input number 2, 3 or 4: "))
+            if int(states) != 2 and int(states) != 3 and int(states) != 4:
+                states = 2
+        print(f"amount of previous notes considered will be {states}")
+        if int(states) > len(melody_start):
+            print("The given start for melody is shorter than amount of notes you wish to consider - no melody can be generated except for the given start")
+        melody = mc.generate_melody(melody_start, prev_states=int(states))
         with open("src/music/generated.abc", "w") as abc_file:
             abc_file.write("L:1/8\n")
             abc_file.write(f"K:{key.upper()}\n")
