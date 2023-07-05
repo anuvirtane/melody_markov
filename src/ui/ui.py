@@ -37,19 +37,19 @@ class UI:
         else:
             melody_start = melody_start.replace(" ", "")
             print(f"Melody will start like this: {melody_start}")
-            states = str(input("How many previous notes do you wish to consider? Input number 2, 3 or 4: "))
+            states = input("How many previous notes do you wish to consider? Input number 2, 3 or 4: ")
             if int(states) != 2 and int(states) != 3 and int(states) != 4:
                 states = 2
-        print(f"amount of previous notes considered will be {states}")
-        if int(states) > len(melody_start):
-            print("The given start for melody is shorter than amount of notes you wish to consider - no melody can be generated except for the given start")
+            if int(states) > len(melody_start):
+                print("The given start for melody is shorter than amount of notes you wish to consider - no melody can be generated")
+                return
         melody = mc.generate_melody(melody_start, prev_states=int(states))
         with open("src/music/generated.abc", "w") as abc_file:
             abc_file.write("L:1/8\n")
             abc_file.write(f"K:{key.upper()}\n")
             abc_file.write(melody)
         abc_to_mid
-        print(f"Generated a melody from teaching data in key {key}")
+        print(f"Generated a melody from teaching data in key {key} considering {states} previous notes ")
         
     def play(self):
         importlib.reload(abc_to_mid)

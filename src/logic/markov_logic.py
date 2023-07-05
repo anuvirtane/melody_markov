@@ -21,7 +21,7 @@ class MarkovChain:
         self.key = key
 
     
-    def generate_melody(self, given_start: str="", max_length: int=20, prev_states=2) -> str:
+    def generate_melody(self, given_start: str="", max_length: int=30, prev_states=2) -> str:
         """
         Returns a melody generated using Markov chain logic.
         Parameters:
@@ -43,7 +43,7 @@ class MarkovChain:
                 notes_as_weighted_possibilities_list = [key for key, value in
                                           possibilities.items() for i in range(value)]
                 next_note = random.choice(notes_as_weighted_possibilities_list)
-            given_start = melody[-1] + next_note
-            melody = melody + next_note            
+            melody = melody + next_note
+            given_start = melody[-prev_states:]      
         return melody
     
